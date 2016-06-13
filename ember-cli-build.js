@@ -7,6 +7,15 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('bower_components/leaflet-draw/dist/leaflet.draw.css');
+  app.import('bower_components/leaflet-draw/dist/leaflet.draw.js');
+  app.import('bower_components/leaflet-draw/dist/images/spritesheet.png', {
+    destDir: 'assets/images'
+  });
+  app.import('bower_components/leaflet-draw/dist/images/spritesheet-2x.png', {
+    destDir: 'assets/images'
+  });
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

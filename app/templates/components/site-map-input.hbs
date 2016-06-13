@@ -1,0 +1,7 @@
+
+<p>Latitude: <code>{{lat}}</code> / Longitude: <code>{{lng}}</code></p>
+
+{{#leaflet-map lat=lat lng=lng zoom=zoom onLoad='init' id="myMap"}}
+  {{tile-layer url="https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png"}}
+{{/leaflet-map}}
+{{yield}}

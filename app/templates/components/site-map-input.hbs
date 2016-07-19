@@ -2,6 +2,11 @@
 <p>Latitude: <code>{{lat}}</code> / Longitude: <code>{{lng}}</code></p>
 
 {{#leaflet-map lat=lat lng=lng zoom=zoom onLoad='init' id="myMap"}}
-  {{tile-layer url="https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png"}}
+  {{tile-layer url="https://api.mapbox.com/styles/v1/exops/ciprf4age000lb5npn7v9twex/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZXhvcHMiLCJhIjoiY2lwcjQ0OHR0MDZ1M2ZsbmNxbXNjbHl0MiJ9.F6TV-GARc29Tv-OrAsNQXw"
+  attribution='Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}}
+  {{geojson-layer geoJSON=polygon1 color="cyan"}}
+  {{geojson-layer geoJSON=polygon2 color="magenta"}}
+  {{geojson-layer geoJSON=polygon3 color="yellow"}}
+  {{geojson-layer geoJSON=polyline}}
 {{/leaflet-map}}
 {{yield}}
